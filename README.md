@@ -29,7 +29,9 @@ Movie posters are fetched dynamically using the **TMDB API**.
 ---
 
 ## 📊 Dataset
-- **Source**: Merged dataset of movies metadata and credits  
+- **Source**: Kaggle TMDB 5000 Movies.csv
+- The dataset used in this project can be downloaded here: [📂 Download merged.csv](https://drive.google.com/uc?export=download&id=1D2WXR06TQwQFQ4D9ax53pVWyYxpCJI9Q
+)  
 - **Selected Features**:
   - `title`  
   - `genres`  

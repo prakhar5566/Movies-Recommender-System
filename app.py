@@ -1,6 +1,3 @@
-from dotenv import load_dotenv
-load_dotenv()
-import os
 import pickle
 import streamlit as st
 import pandas as pd
@@ -8,7 +5,7 @@ import requests
 from sklearn.metrics.pairwise import cosine_similarity
 
 # Load API key from environment
-API_KEY = os.getenv("TMDB_API_KEY")
+API_KEY = st.secrets["TMDB_API_KEY"]
 
 # Load the saved DataFrame and vectorizer
 movies_df = pickle.load(open('movies_df.pkl', 'rb'))
@@ -59,3 +56,4 @@ if st.button('Show Recommendation'):
     for col, name, poster in zip(cols, names, posters):
         col.text(name)
         col.image(poster)
+
